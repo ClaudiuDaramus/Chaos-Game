@@ -1,0 +1,146 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{Chaos Game}
+\author{}
+\date{\vspace{-2.5em}}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Chaos Game},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+Ianuarie, 2022
+
+Realizat de Iordache Ovidiu si Daramus Claudiu-Lucian
+
+\hypertarget{despre-chaos-game}{%
+\subsection{Despre Chaos Game}\label{despre-chaos-game}}
+
+\href{https://en.wikipedia.org/wiki/Chaos_game}{Wikipedia}
+
+În matematică, termenul de Chaos Game se referea inițial la o metodă de
+creare a unui fractal, folosind un poligon și un punct inițial selectat
+la întâmplare în interiorul acestuia. Fractalul este creat prin crearea
+iterativă a unei secvențe de puncte, începând cu punctul aleator
+inițial, în care fiecare punct din șir este o fracțiune dată din
+distanța dintre punctul anterior și unul dintre vârfurile poligonului;
+vârful este ales la întâmplare în fiecare iterație. Repetarea acestui
+proces iterativ de un număr mare de ori, selectând vârful la întâmplare
+la fiecare iterație și aruncând primele câteva puncte din secvență, va
+produce adesea (dar nu întotdeauna) o formă fractală. Folosind un
+triunghi obișnuit și factorul 1/2 va rezulta triunghiul Sierpinski, în
+timp ce crearea aranjamentului adecvat cu patru puncte și un factor 1/2
+va crea o afișare a unui „Tetraedru Sierpinski'', analogul
+tridimensional al Sierpinski. triunghi. Pe măsură ce numărul de puncte
+este crescut la un număr N, aranjamentul formează un (N-1)-dimensional
+Sierpinski Simplex corespunzător.
+
+Termenul a fost generalizat pentru a se referi la o metodă de generare a
+atractorului, sau a punctului fix, al oricărui sistem de funcții iterate
+(IFS). Începând cu orice punct \(x_0\), iterațiile succesive sunt
+formate ca \(x_k+1\) = \(f_r\)(\(x_k\)), unde fr este un membru al
+IFS-ului dat selectat aleatoriu pentru fiecare iterație. Iterațiile
+converg către punctul fix al IFS. Ori de câte ori \(x_0\) aparține
+atractorului IFS, toate iterațiile \(x_k\) rămân în interiorul
+atractorului și, cu probabilitatea 1, formează o mulțime densă în acesta
+din urmă.
+
+Metoda „chaos game'' trasează punctele în ordine aleatorie peste tot
+atractorul. Acest lucru este în contrast cu alte metode de desenare a
+fractalilor, care testează fiecare pixel de pe ecran pentru a vedea dacă
+aparține fractalului. Forma generală a unui fractal poate fi trasată
+rapid cu metoda „chaos game'', dar poate fi dificil să trasezi unele
+zone ale fractalului în detaliu.
+
+Cu ajutorul „chaos game'' se poate realiza un nou fractal și în timpul
+realizării noului fractal pot fi obținuți câțiva parametri. Acești
+parametri sunt utili pentru aplicații ale teoriei fractale, cum ar fi
+clasificarea și identificarea. Noul fractal este auto-similar cu
+originalul în unele caracteristici importante, cum ar fi dimensiunea
+fractală.
+
+Dacă în „chaos game'' începeți de la fiecare vârf și treceți prin toate
+căile posibile pe care le poate parcurge jocul, veți obține aceeași
+imagine ca și când luați o singură cale aleatorie. Cu toate acestea,
+luarea a mai mult de o cale se face rar, deoarece suprasolicitarea
+pentru urmărirea fiecărei căi o face mult mai lent de calculat. Această
+metodă are avantajele de a ilustra modul în care fractalul este format
+mai clar decât metoda standard, precum și de a fi deterministă.
+
+\hypertarget{forme-fractali}{%
+\subsubsection{Forme Fractali:}\label{forme-fractali}}
+
+Folosind un triunghi obișnuit și factorul 1/2 va rezulta
+\href{https://en.wikipedia.org/wiki/Sierpi\%C5\%84ski_triangle}{Triunghiul
+Sierpiński}:
+\includegraphics{https://upload.wikimedia.org/wikipedia/commons/f/ff/Sierpinski_chaos_animated.gif}
+
+Un pentaflake, sau
+\href{https://en.wikipedia.org/wiki/N-flake\#Pentaflake}{Pentagon
+Sierpiński}, este format din fulgi succesivi din șase pentagoane
+regulate. Fiecare fulg este format prin plasarea unui pentagon în
+fiecare colț și unul în centru. golden ration este de
+\textasciitilde0,63:
+\includegraphics{https://upload.wikimedia.org/wikipedia/commons/c/c7/V4jump2_5_center.gif}
+
+\end{document}
