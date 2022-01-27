@@ -28,24 +28,20 @@ Cu ajutorul chaos game se poate realiza un nou fractal și în timpul realizări
 
 Dacă în chaos game începeți de la fiecare vârf și treceți prin toate căile posibile pe care le poate parcurge jocul, veți obține aceeași imagine ca și când luați o singură cale aleatorie. Cu toate acestea, luarea a mai mult de o cale se face rar, deoarece suprasolicitarea pentru urmărirea fiecărei căi o face mult mai lent de calculat. Această metodă are avantajele de a ilustra modul în care fractalul este format mai clar decât metoda standard, precum și de a fi deterministă.
 
-### Example de Forme Fractali:
+### Exemple de Forme Fractali:
 
 Folosind un triunghi obișnuit și factorul 1/2 va rezulta [Triunghiul Sierpiński](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle).
 ![](https://upload.wikimedia.org/wikipedia/commons/f/ff/Sierpinski_chaos_animated.gif)
 
 
 
-Un pentaflake, sau [Pentagon Sierpiński](https://en.wikipedia.org/wiki/N-flake#Pentaflake), este format din fulgi succesivi din șase pentagoane regulate. Fiecare fulg este format prin plasarea unui pentagon în fiecare colț și unul în centru. golden ration este de ~0,63.
-![](https://upload.wikimedia.org/wikipedia/commons/c/c7/V4jump2_5_center.gif)
-
-
-
 Modul în care funcționează chaos game este bine ilustrat atunci când fiecare cale este luată în considerare.
 ![](https://upload.wikimedia.org/wikipedia/commons/b/b6/Sierpinski_Chaos.gif)
 
-# Example 
 
-### Triunghi n=3 r=1/2
+# Exemple 
+
+### Triunghi n=3 r=1/2 (Triunghiul Sierpiński)
 
 ```{r echo=FALSE}
 triangle.points = data.frame(x = c(0, 1, 0.5), y = c(0, 0, 1))
@@ -189,11 +185,11 @@ plot(show.points,  axes=FALSE, yaxt = "n",
      xaxt = "n", frame.plot=TRUE, pch=20, ann=FALSE,  cex = 0.5)
 ```
 
-### Patrat n=4 r=0.6
+### Patrat n=4 r=0.60
 
 ```{r echo=FALSE}
 square.points = data.frame(x = c(0, 0, 1, 1), y = c(0, 1, 0, 1))
-r = 0.6
+r = 0.60
 current.point = round(runif(2),2)
 show.points = square.points
 for(i in 1:10000)
@@ -297,11 +293,12 @@ plot(show.points,  axes=FALSE, yaxt = "n",
      xaxt = "n", frame.plot=TRUE, pch=20, ann=FALSE,  cex = 0.5)
 ```
 
-### Pentagon n=5 r=2/3
+### Pentagon n=5 r=0.63 
+Un pentaflake, sau [Pentagon Sierpiński](https://en.wikipedia.org/wiki/N-flake#Pentaflake), este format din fulgi succesivi din șase pentagoane regulate. Fiecare fulg este format prin plasarea unui pentagon în fiecare colț și unul în centru.
 
 ```{r echo=FALSE}
 pentagon.points = data.frame(x = c(0.2, 0.8, 0.5, 0, 1), y = c(0, 0, 1, 0.6, 0.6))
-r = 2/3
+r = 0.63
 current.point = round(runif(2),2)
 show.points = pentagon.points
 for(i in 1:10000)
